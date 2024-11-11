@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - grounded
+  - plataforma
+  - Enemigo
+  - Escondite
+  - EnemigoAplastable
+  - "ZonaDa\xF1able"
   layers:
   - Default
   - TransparentFX

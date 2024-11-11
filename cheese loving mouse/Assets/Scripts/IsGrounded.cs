@@ -8,10 +8,28 @@ public class IsGrounded : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        suelo=true;
+        if (collision.CompareTag("plataforma"))
+        {
+            collision.tag = "grounded";
+            
+        }
+        if (collision.CompareTag("grounded"))
+        {
+            suelo = true;
+        }
+        if (collision.CompareTag("ZonaDañable"))
+        {
+            transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = (Vector2.up * 8);
+            collision.GetComponent<DañoEnemigo>().padre.SetActive(false);
+            
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        suelo = false;
+        if (collision.CompareTag("grounded"))
+        {
+            suelo = false;
+        }
     }
+  
 }
