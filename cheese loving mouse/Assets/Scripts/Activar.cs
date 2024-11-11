@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,17 +16,10 @@ public class Activar : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (Input.GetKey(KeyCode.J)&& collision.CompareTag("Player"))
         {
-            if (Movimiento.activar)
-            {
-                sprite.sprite = sprite2;
-                activado=true;
-            }
-            else
-            {
-                sprite.sprite = sprite1;
-            }
+            sprite.sprite = sprite2;
+            activado = true;
         }
     }
 }

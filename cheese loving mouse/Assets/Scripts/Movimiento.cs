@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movimiento : MonoBehaviour
 {
@@ -9,10 +10,7 @@ public class Movimiento : MonoBehaviour
     Rigidbody2D rb2d;
     SpriteRenderer sr;
     Animator anim;
-    public Camera cam;
     public bool saltoMejorado,saltando;
-    public bool escondido;
-    public static bool activar;
     public float MuchaFuerza,PocaFuerza;
     void Start()
     {
@@ -70,11 +68,9 @@ public class Movimiento : MonoBehaviour
             {
                 
                 rb2d.velocity += Vector2.up * Physics2D.gravity.y * PocaFuerza * Time.deltaTime;
-            }
-            
+            }  
         }
         
-
     }
     private void Update()
     {
@@ -86,30 +82,6 @@ public class Movimiento : MonoBehaviour
         {
             saltando = false;
         }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            activar = true;
-        }
-      
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Enemigo")&&!escondido)
-        {
-            cam.transform.SetParent(null);
-            gameObject.SetActive(false);
-        }
-        if (collision.CompareTag("Escondite"))
-        {
-            escondido = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Escondite"))
-        {
-            escondido = false;
-        }
-    }
+    
 }

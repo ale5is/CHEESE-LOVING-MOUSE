@@ -10,6 +10,7 @@ TagManager:
   - Escondite
   - EnemigoAplastable
   - "ZonaDa\xF1able"
+  - Queso
   layers:
   - Default
   - TransparentFX
