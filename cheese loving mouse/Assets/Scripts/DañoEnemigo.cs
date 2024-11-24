@@ -9,4 +9,12 @@ public class DañoEnemigo : MonoBehaviour
     {
         padre = transform.parent.gameObject;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("DañarEnemigo"))
+        {
+            collision.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = (Vector2.up * 9);
+            padre.SetActive(false);
+        }
+    }
 }

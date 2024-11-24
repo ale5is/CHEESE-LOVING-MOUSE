@@ -11,14 +11,15 @@ TagManager:
   - EnemigoAplastable
   - "ZonaDa\xF1able"
   - Queso
+  - "Da\xF1arEnemigo"
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - suelo
   - Water
   - UI
-  - 
+  - trampolin
   - 
   - 
   - 

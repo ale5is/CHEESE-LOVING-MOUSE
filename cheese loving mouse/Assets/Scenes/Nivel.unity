@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 33440090}
   - component: {fileID: 33440092}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (2)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 51584326}
   - component: {fileID: 51584327}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (1)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 67931410}
   - component: {fileID: 67931411}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (1)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 68237225}
   - component: {fileID: 68237226}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (6)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 97673998}
   - component: {fileID: 97673999}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (10)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -553,7 +553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 104348961}
   - component: {fileID: 104348962}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (17)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 127667006}
   - component: {fileID: 127667007}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (11)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -721,7 +721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 142824901}
   - component: {fileID: 142824902}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (13)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -805,7 +805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 143246473}
   - component: {fileID: 143246474}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (3)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -889,7 +889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 157411142}
   - component: {fileID: 157411141}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: suelo1 (1)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -1116,7 +1116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 191469499}
   - component: {fileID: 191469500}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (4)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -1591,7 +1591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 217825170}
   - component: {fileID: 217825171}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (5)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -1766,7 +1766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224663852}
   - component: {fileID: 224663853}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (21)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -1850,7 +1850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228824218}
   - component: {fileID: 228824219}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (2)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -2008,12 +2008,11 @@ Transform:
   m_GameObject: {fileID: 236430246}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.59, y: -9.16, z: 0}
+  m_LocalPosition: {x: -1.35, y: 0.54, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 619364082}
-  - {fileID: 519420032}
+  - {fileID: 632489660}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &236430250
@@ -2031,7 +2030,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2100,10 +2099,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459143ab058f47342847f921fce37053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 7
-  salto: 8
+  velocidad: 8
+  velocidadMaxima: 0
+  velocidadInicial: 0
+  longitudRaycast: 1.48
+  capaSuelo:
+    serializedVersion: 2
+    m_Bits: 8
+  capaTrampolin:
+    serializedVersion: 2
+    m_Bits: 0
+  salto: 10
   saltoMejorado: 1
   saltando: 0
+  suelo: 0
+  rebotando: 0
   MuchaFuerza: 0.5
   PocaFuerza: 1
 --- !u!95 &236430253
@@ -2330,7 +2340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 264612279}
   - component: {fileID: 264612281}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (11)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -2414,7 +2424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 280388760}
   - component: {fileID: 280388761}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (23)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -2498,7 +2508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 288947481}
   - component: {fileID: 288947482}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (6)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -2751,7 +2761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 305057451}
   - component: {fileID: 305057452}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (16)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -2969,7 +2979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 335969090}
   - component: {fileID: 335969091}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (23)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -3053,7 +3063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 355009886}
   - component: {fileID: 355009887}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (12)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -3272,7 +3282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 370736213}
   - component: {fileID: 370736212}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Suelo (2)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -3373,7 +3383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 396481221}
   - component: {fileID: 396481222}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (4)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -3626,7 +3636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 406658955}
   - component: {fileID: 406658956}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (22)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -3710,7 +3720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 410500526}
   - component: {fileID: 410500527}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (6)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -3869,7 +3879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 415887434}
   - component: {fileID: 415887435}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (2)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -3953,7 +3963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454434097}
   - component: {fileID: 454434096}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: suelo1
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -4037,7 +4047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 459681273}
   - component: {fileID: 459681274}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -4121,7 +4131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 463179343}
   - component: {fileID: 463179342}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Suelo
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -4222,7 +4232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 468235558}
   - component: {fileID: 468235559}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (13)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -4306,7 +4316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 474562335}
   - component: {fileID: 474562336}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -4390,7 +4400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 479612221}
   - component: {fileID: 479612222}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (23)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -4474,7 +4484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 488786087}
   - component: {fileID: 488786088}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -4558,7 +4568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 499130096}
   - component: {fileID: 499130097}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (16)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -4644,6 +4654,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4719,11 +4730,11 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11714285, y: 0.15, z: -10}
-  m_LocalScale: {x: 0.14285713, y: 0.14285713, z: 1}
+  m_LocalPosition: {x: -0.5300001, y: 1.5900002, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 236430249}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -4737,6 +4748,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87124954a6f5004f829d8eea778ee97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f83e5b4a3dc22446b345b88dbaf7183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetivo: {fileID: 236430249}
+  velocidadCamara: 0
+  desplazamiento: {x: 0, y: 1.3, z: -10}
 --- !u!1 &520668589
 GameObject:
   m_ObjectHideFlags: 0
@@ -4918,7 +4944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 533064458}
   - component: {fileID: 533064459}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (8)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -5002,7 +5028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 539637656}
   - component: {fileID: 539637657}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (19)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -5086,7 +5112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 557796883}
   - component: {fileID: 557796884}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (20)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -5170,7 +5196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 566205509}
   - component: {fileID: 566205510}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (1)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -5397,7 +5423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603561979}
   - component: {fileID: 603561980}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (21)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -5471,7 +5497,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &619364081
+--- !u!1 &632489659
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5479,38 +5505,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 619364082}
-  - component: {fileID: 619364083}
-  - component: {fileID: 619364084}
+  - component: {fileID: 632489660}
+  - component: {fileID: 632489661}
   m_Layer: 0
-  m_Name: IsGrounded
-  m_TagString: Untagged
+  m_Name: "Da\xF1ar"
+  m_TagString: "Da\xF1arEnemigo"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &619364082
+--- !u!4 &632489660
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619364081}
+  m_GameObject: {fileID: 632489659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.012, y: -0.188, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.05, z: 1}
+  m_LocalPosition: {x: 0.1203, y: -0.13, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 236430249}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &619364083
+--- !u!61 &632489661
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619364081}
+  m_GameObject: {fileID: 632489659}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -5536,7 +5561,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07303196, y: 0.3}
+  m_Offset: {x: -0.13372846, y: -0.019051466}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5547,20 +5572,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0508564, y: 0.5}
+  m_Size: {x: 0.11272296, y: 0.021464758}
   m_EdgeRadius: 0
---- !u!114 &619364084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619364081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5fe1e5a39d94614380a28a69dc6c1f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &636303383
 GameObject:
   m_ObjectHideFlags: 0
@@ -5571,7 +5584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 636303384}
   - component: {fileID: 636303385}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (5)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -5655,7 +5668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 639625262}
   - component: {fileID: 639625263}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (5)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -5739,7 +5752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 647396167}
   - component: {fileID: 647396168}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (18)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -6281,7 +6294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 733528462}
   - component: {fileID: 733528463}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (16)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -6365,7 +6378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 744531709}
   - component: {fileID: 744531711}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (3)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -6449,7 +6462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 772513498}
   - component: {fileID: 772513499}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (9)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -6533,7 +6546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 776304397}
   - component: {fileID: 776304398}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (3)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -6701,7 +6714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 823364619}
   - component: {fileID: 823364620}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (1)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -6953,7 +6966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 844034426}
   - component: {fileID: 844034427}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (13)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -7037,7 +7050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 849614707}
   - component: {fileID: 849614708}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -7256,7 +7269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 899098185}
   - component: {fileID: 899098186}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (2)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -7340,7 +7353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 943127186}
   - component: {fileID: 943127187}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (3)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -7424,7 +7437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 953870690}
   - component: {fileID: 953870691}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (22)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -7592,7 +7605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 980468726}
   - component: {fileID: 980468727}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (1)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -7676,7 +7689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1010090479}
   - component: {fileID: 1010090480}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (10)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -7907,7 +7920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1042012304}
   - component: {fileID: 1042012305}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (3)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -7991,7 +8004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1049115290}
   - component: {fileID: 1049115291}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -8075,7 +8088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1060164568}
   - component: {fileID: 1060164567}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: suelo1 (3)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -8197,7 +8210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1073069069}
   - component: {fileID: 1073069070}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (3)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -8284,7 +8297,7 @@ GameObject:
   - component: {fileID: 1084789313}
   - component: {fileID: 1084789312}
   - component: {fileID: 1084789311}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: plataforma (1)
   m_TagString: plataforma
   m_Icon: {fileID: 0}
@@ -8307,7 +8320,7 @@ MonoBehaviour:
   reincio: 0.2
   distanciaX: -14
   distanciaY: 0
-  velocidad: 3
+  velocidad: 4
   activador: {fileID: 1036120535}
 --- !u!251 &1084789312
 PlatformEffector2D:
@@ -8450,7 +8463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086245551}
   - component: {fileID: 1086245553}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (8)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -8534,7 +8547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1091616323}
   - component: {fileID: 1091616324}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -8618,7 +8631,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1132262380}
   - component: {fileID: 1132262381}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (4)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -8770,7 +8783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1143316912}
   - component: {fileID: 1143316913}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (20)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -8854,7 +8867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1159816968}
   - component: {fileID: 1159816969}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (3)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -8938,7 +8951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1168757190}
   - component: {fileID: 1168757192}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (10)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -9022,7 +9035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213591006}
   - component: {fileID: 1213591005}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Suelo (1)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -9123,7 +9136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1246367690}
   - component: {fileID: 1246367691}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (20)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -9207,7 +9220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1260578638}
   - component: {fileID: 1260578639}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (17)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -9291,7 +9304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1290343089}
   - component: {fileID: 1290343090}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (4)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -9375,7 +9388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1311890090}
   - component: {fileID: 1311890091}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (7)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -9459,7 +9472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1348958679}
   - component: {fileID: 1348958678}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: suelo1 (4)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -9686,7 +9699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1408534764}
   - component: {fileID: 1408534765}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (4)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -9770,7 +9783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1418746161}
   - component: {fileID: 1418746162}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (6)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -9854,7 +9867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1422379167}
   - component: {fileID: 1422379168}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (14)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -9938,7 +9951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1430340064}
   - component: {fileID: 1430340065}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -10097,7 +10110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1457352852}
   - component: {fileID: 1457352853}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (11)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -10181,7 +10194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1459354441}
   - component: {fileID: 1459354442}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -10265,7 +10278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1462761615}
   - component: {fileID: 1462761617}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (1)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -10352,7 +10365,7 @@ GameObject:
   - component: {fileID: 1463502077}
   - component: {fileID: 1463502078}
   - component: {fileID: 1463502079}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: plataforma
   m_TagString: plataforma
   m_Icon: {fileID: 0}
@@ -10420,7 +10433,7 @@ Transform:
   m_GameObject: {fileID: 1463502073}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.62, y: -10.99, z: 0}
+  m_LocalPosition: {x: 46.62, y: -11.18, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10506,7 +10519,7 @@ MonoBehaviour:
   reincio: 0.2
   distanciaX: 0
   distanciaY: 10
-  velocidad: 3
+  velocidad: 4
   activador: {fileID: 671883714}
 --- !u!1 &1487317206
 GameObject:
@@ -10593,7 +10606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1488482091}
   - component: {fileID: 1488482092}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (5)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -10677,7 +10690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1521163496}
   - component: {fileID: 1521163497}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (14)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -10761,7 +10774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1525780183}
   - component: {fileID: 1525780185}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (5)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -10845,7 +10858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1531821840}
   - component: {fileID: 1531821841}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (9)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -10929,7 +10942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1535728192}
   - component: {fileID: 1535728193}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (15)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -11013,7 +11026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1551213964}
   - component: {fileID: 1551213965}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (1)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -11097,7 +11110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1578051773}
   - component: {fileID: 1578051774}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (2)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -11181,7 +11194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1603795477}
   - component: {fileID: 1603795478}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (12)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -11302,7 +11315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1612587228}
   - component: {fileID: 1612587229}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (2)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -11386,7 +11399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1613639515}
   - component: {fileID: 1613639516}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (18)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -11470,7 +11483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1641116086}
   - component: {fileID: 1641116087}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (22)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -11697,7 +11710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652218443}
   - component: {fileID: 1652218442}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: suelo1 (2)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -11781,7 +11794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1653883671}
   - component: {fileID: 1653883673}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (7)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -12079,7 +12092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1746165670}
   - component: {fileID: 1746165671}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (2)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -12163,7 +12176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1746225816}
   - component: {fileID: 1746225817}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (4)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -12247,7 +12260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1755154000}
   - component: {fileID: 1755154001}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (19)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -12331,7 +12344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1765314937}
   - component: {fileID: 1765314939}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (6)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -12415,7 +12428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1767840470}
   - component: {fileID: 1767840471}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (5)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -12501,7 +12514,7 @@ GameObject:
   - component: {fileID: 1787061987}
   - component: {fileID: 1787061986}
   - component: {fileID: 1787061985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trampolin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12520,7 +12533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713ff837945f33641930f61689e2a4cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulso: 14
+  impulso: 16
+  impulsoMinimo: 0
+  impulsoMaximo: 20
 --- !u!61 &1787061986
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12643,7 +12658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1814873245}
   - component: {fileID: 1814873247}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (4)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -12835,7 +12850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1857753142}
   - component: {fileID: 1857753143}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (6)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -12919,7 +12934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1888801795}
   - component: {fileID: 1888801796}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (21)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -13003,7 +13018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1896220608}
   - component: {fileID: 1896220609}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (1)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -13087,7 +13102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1905155156}
   - component: {fileID: 1905155157}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (6)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -13204,7 +13219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1931816860}
   - component: {fileID: 1931816861}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (5)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -13288,7 +13303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1943369129}
   - component: {fileID: 1943369130}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (8)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -13372,7 +13387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1977091040}
   - component: {fileID: 1977091041}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (14)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -13456,7 +13471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1979631257}
   - component: {fileID: 1979631258}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (3)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -13540,7 +13555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1986898623}
   - component: {fileID: 1986898624}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (18)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -13624,7 +13639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1989238961}
   - component: {fileID: 1989238962}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (2)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -13708,7 +13723,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004256828}
   - component: {fileID: 2004256829}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (15)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -13792,7 +13807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2017024945}
   - component: {fileID: 2017024946}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (6)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -13876,7 +13891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2021224562}
   - component: {fileID: 2021224564}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (9)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -13960,7 +13975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2028457520}
   - component: {fileID: 2028457521}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (7)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -14349,7 +14364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2094662991}
   - component: {fileID: 2094662992}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (19)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -14433,7 +14448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2101844152}
   - component: {fileID: 2101844153}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (17)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -14517,7 +14532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2110827632}
   - component: {fileID: 2110827633}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (15)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -14601,7 +14616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2118103412}
   - component: {fileID: 2118103413}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (4)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -14685,7 +14700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2136433517}
   - component: {fileID: 2136433518}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (12)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -14769,7 +14784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143121471}
   - component: {fileID: 2143121472}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block-big (5)
   m_TagString: grounded
   m_Icon: {fileID: 0}
@@ -14848,6 +14863,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1661975073}
+  - {fileID: 519420032}
   - {fileID: 1463502076}
   - {fileID: 1084789315}
   - {fileID: 463179343}
