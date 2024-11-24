@@ -39,20 +39,25 @@ public class Movimiento : MonoBehaviour
         }
         else
         {
-            anim.SetBool("run", false);
+            //anim.SetBool("run", false);
         }
-        if (Input.GetAxis("Horizontal") <0)
-        {
-            sr.flipX = true;
-            anim.SetBool("run", true);
-        }
-        if(Input.GetAxis("Horizontal") > 0)
-        {
-            sr.flipX = false;
-            anim.SetBool("run", true);
-        }
+       
         
         float VelocidadX=Input.GetAxis("Horizontal")*Time.deltaTime*velocidad;
+        anim.SetFloat("run", VelocidadX*velocidad);
+
+        if (VelocidadX < 0)
+        {
+            transform.localScale=new Vector3(-7,7,1);
+            //sr.flipX = true;
+
+        }
+        if (VelocidadX > 0)
+        {
+            transform.localScale = new Vector3(7, 7, 1);
+            //sr.flipX = false;
+        }
+
         Vector3 position=transform.position;
         transform.position=new Vector3(VelocidadX+position.x, position.y, position.z);
 
@@ -64,26 +69,20 @@ public class Movimiento : MonoBehaviour
             rb2d.AddForce(new Vector2(0f, salto), ForceMode2D.Impulse);
             //rb2d.velocity = new Vector2(rb2d.velocity.x, salto);
         }
+
+        anim.SetBool("ensuelo", suelo);
+
         if (Input.GetKey("k"))
         {
-            anim.speed = 1;
+            anim.speed = 1.2f;
             velocidad = velocidadMaxima;
         }
         else
         {
-            anim.speed = 0.5f;
+            anim.speed = 0.6f;
             velocidad = velocidadInicial;
         }
 
-        if (suelo)
-        {
-            anim.SetBool("jump", false);
-        }
-        if (!suelo)
-        {
-            anim.SetBool("jump", true);
-            anim.SetBool("run", false);
-        }
 
         if (saltoMejorado)
         {
@@ -97,15 +96,6 @@ public class Movimiento : MonoBehaviour
 
                 rb2d.velocity += Vector2.up * Physics2D.gravity.y * PocaFuerza * Time.deltaTime;
             }
-        }
-
-        if (Input.GetKeyDown("space"))
-        {
-            saltando = true;
-        }
-        if (Input.GetKeyUp("space"))
-        {
-            saltando = false;
         }
     }
     
