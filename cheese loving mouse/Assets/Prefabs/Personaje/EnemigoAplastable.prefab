@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54d3afbc56bf1d47846952e33514699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugador: {fileID: 1726857375440265585, guid: b9b514346b7f34540bd55137bbf1a6e7, type: 3}
+  jugador: {fileID: 5529461813813866705, guid: 0864a075a0146c34195168dd628a2018, type: 3}
   radioDeteccion: 5
   velocidad: 30
   EnemigoIA: {fileID: 7198885336992244371}

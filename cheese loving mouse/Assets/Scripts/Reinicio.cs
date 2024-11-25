@@ -11,6 +11,11 @@ public class Reinicio : MonoBehaviour
     {
        if (numScene == 0)
         {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                SceneManager.LoadScene(0);
+                
+            }
             if (Input.GetKey(KeyCode.Return))
             {
                 SceneManager.LoadScene(1);
@@ -19,18 +24,18 @@ public class Reinicio : MonoBehaviour
         }
             
        
-        if (numScene == 1)
-        {
+       
             if (Input.GetKey(KeyCode.Z))
             {
                 SceneManager.LoadScene(0);
                 numScene = 0;
             }
-            if (Input.GetKey("r"))
-            {
-                SceneManager.LoadScene(1);
-            }
-        }
+           
         
+        if (Input.GetKey("r"))
+        {
+            SceneManager.LoadScene(numScene);
+        }
+
     }
 }

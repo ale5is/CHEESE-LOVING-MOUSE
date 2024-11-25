@@ -9,13 +9,13 @@ public class HpJugador : MonoBehaviour
     public bool golpeado;
     public Camera cam;
     public bool escondido;
-    public GameObject Derrota,hp1,hp2,hp3,Victoria;
+    public GameObject Derrota,hp1,hp2,hp3;
     private void Start()
     {
         golpeado = false;
         reinicio = invulnerable;
         Derrota.SetActive(false);
-        Victoria.SetActive(false);
+       
     }
     private void Update()
     {
@@ -72,7 +72,6 @@ public class HpJugador : MonoBehaviour
         }
         if (collision.CompareTag("Queso"))
         {
-            Victoria.SetActive(true);
             gameObject.SetActive(false);
             cam.transform.SetParent(null);
         }
