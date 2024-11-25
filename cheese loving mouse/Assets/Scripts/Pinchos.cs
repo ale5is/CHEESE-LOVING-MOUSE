@@ -9,7 +9,9 @@ public class Pinchos : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(1);
+            Vector2 direccionDaño = new Vector2(transform.position.x, 0);
+            collision.gameObject.GetComponent<Movimiento>().recibeDaño(direccionDaño, 1);
         }
     }
+
 }

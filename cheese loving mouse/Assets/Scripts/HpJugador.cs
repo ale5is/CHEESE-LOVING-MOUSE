@@ -6,7 +6,7 @@ public class HpJugador : MonoBehaviour
 {
     public int hp;
     public float invulnerable,reinicio;
-    bool golpeado;
+    public bool golpeado;
     public Camera cam;
     public bool escondido;
     public GameObject Derrota,hp1,hp2,hp3,Victoria;
@@ -24,6 +24,9 @@ public class HpJugador : MonoBehaviour
             gameObject.SetActive(false);
             cam.transform.SetParent(null);
             Derrota.SetActive(true);
+            hp1.SetActive(false);
+            hp2.SetActive(false);
+            hp3.SetActive(false);
         }
         if (hp == 3)
         {
@@ -43,15 +46,7 @@ public class HpJugador : MonoBehaviour
             hp2.SetActive(false);
             hp3.SetActive(true);
         }
-        if (hp == 0)
-        {
-            hp1.SetActive(false);
-            hp2.SetActive(false);
-            hp3.SetActive(false);
-        }
-        {
-            
-        }
+        
         if (golpeado)
         {
             if (invulnerable <= 0)
@@ -68,25 +63,12 @@ public class HpJugador : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("EnemigoAplastable"))
-        {
-            if (invulnerable == reinicio&!golpeado)
-            {
-                golpeado = true;
-                hp--;
-            }
-        }
-        if (collision.CompareTag("Enemigo") && !escondido)
-        {
-            if (invulnerable == reinicio & !golpeado)
-            {
-                golpeado = true;
-                hp = hp - 2;
-            }
-        }
+
         if (collision.CompareTag("Escondite"))
         {
+            gameObject.layer = 8;
             escondido = true;
+            
         }
         if (collision.CompareTag("Queso"))
         {
@@ -95,11 +77,50 @@ public class HpJugador : MonoBehaviour
             cam.transform.SetParent(null);
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Escondite"))
+        {
+            gameObject.layer = 8;
+            escondido = true;
+            
+        }
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Escondite"))
         {
             escondido = false;
+            gameObject.layer = 0;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemigo") && !escondido)
+        {
+            if (invulnerable == reinicio & !golpeado)
+            {
+            golpeado = true;
+            hp = hp - 2;
+            }
+        }
+
+        if (collision.gameObject.CompareTag("EnemigoAplastable"))
+        {
+            if (invulnerable == reinicio & !golpeado)
+            {
+                golpeado = true;
+                hp--;
+            }
+        }
+        if (collision.gameObject.CompareTag("pinchos"))
+        {
+            if (invulnerable == reinicio & !golpeado)
+            {
+                golpeado = true;
+                hp-=2;
+            }
         }
     }
 }

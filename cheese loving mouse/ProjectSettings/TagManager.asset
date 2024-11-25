@@ -12,6 +12,7 @@ TagManager:
   - "ZonaDa\xF1able"
   - Queso
   - "Da\xF1arEnemigo"
+  - pinchos
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Water
   - UI
   - trampolin
-  - 
-  - 
+  - escondite
+  - escondido
   - 
   - 
   - 
